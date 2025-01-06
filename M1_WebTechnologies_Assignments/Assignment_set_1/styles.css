@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Input and Button */
+  .task-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Task List */
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    transition: border 0.3s;
+  }
+  
+  .task-item:hover {
+    border: 1px dashed #007bff;
+  }
+  
+  .task-item.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #e9ecef;
+  }
+  
+  .task-item button {
+    margin-left: 5px;
+    background-color: #dc3545;
+    padding: 5px 10px;
+  }
+  
+  .task-item button:hover {
+    background-color: #bd2130;
+  }
+  
+  /* Drag-and-Drop Feedback */
+  .task-item[draggable="true"]:hover {
+    cursor: grab;
+  }
+  
+  .task-item[draggable="true"] {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .task-item.dragging {
+    opacity: 0.5;
+  }
+  
